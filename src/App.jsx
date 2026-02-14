@@ -26,8 +26,6 @@ export default function App() {
     "Late night GMeet calls 💻"
   ];
 
-  const galleryImages = Array.from({ length: 14 }, (_, i) => `images/${i + 1}.jpg`);
-
   if (!authenticated) {
     return (
       <div style={styles.lockScreen}>
@@ -94,15 +92,15 @@ export default function App() {
 
           <h2 style={{ marginTop: 50 }}>Us 📸</h2>
           <div style={styles.grid}>
-            {galleryImages.map((src, index) => (
-              <img
-                key={index}
-                src={src}
-                alt={`Memory ${index + 1}`}
-                style={styles.image}
-              />
-            ))}
-          </div>
+  {Array.from({ length: 14 }).map((_, index) => (
+    <img
+      key={index}
+      src={`/images/${index + 1}.jpg`}
+      alt={`Memory ${index + 1}`}
+      style={styles.image}
+    />
+  ))}
+</div>
 
           <h2 style={{ marginTop: 50 }}>
             Will you be my Valentine again? 💍
