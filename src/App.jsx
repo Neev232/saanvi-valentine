@@ -26,7 +26,7 @@ export default function App() {
     "Late night GMeet calls 💻"
   ];
 
-  const galleryImages = Array.from({ length: 14 }, (_, i) => `/images/${i + 1}.jpg`);
+  const galleryImages = Array.from({ length: 14 }, (_, i) => `images/${i + 1}.jpg`);
 
   if (!authenticated) {
     return (
